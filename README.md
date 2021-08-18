@@ -5,6 +5,7 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-ver-o-projeto">Rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
@@ -40,22 +41,26 @@ O Rocket.Q é uma aplicação de interação através de perguntas, sendo possí
 ## Como ver o Projeto
 
 Primeiro Clone o repositório
+
 ```bash
 $ git clone https://github.com/IgorVini25/Rocket.q-NLW6.git
 $ cd ./Rocket.q-NLW6
 ```
 
 Instale as dependências
+
 ```node
 $ npm install
 ```
 
 Crie o Banco de Dados(Você pode mudar a senha de Admin no arquivo [init.js](src/db/init.js))
+
 ```node
 $ npm run init-db
 ```
 
 Rode o Projeto
+
 ```node
 $ npm start
 ```
