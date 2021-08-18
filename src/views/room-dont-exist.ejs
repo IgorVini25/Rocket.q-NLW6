@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Sala não encontrada - Rocket.Q</title>
+
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
+    <style>
+      p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+      }
+      #error404 main h2 {
+        font-family: 'Poppins', sans-serif;
+        color: var(--black);
+        font-size: clamp(28px, 7vw, 4rem);
+        margin-bottom: 2.4rem;
+      }
+      #error404 main section .button {
+        margin-top: 1rem;
+      }
+    </style>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="error404" class="content">
+      <header>
+        <a href="/">
+          <img src="/images/logo.svg" alt="Rocket.Q Logo" />
+        </a>
+      </header>
+
+      <div id="bg">
+        <div class="ball top"></div>
+        <div class="ball bottom"></div>
+      </div>
+
+      <main>
+        <div class="container">
+          <section>
+            <h2>Esta sala não existe</h2>
+            <p>
+              A sala <%= roomId %> que você está tentando entrar não existe. Ela
+              pode ter sido excluída ou o código estar errado.
+            </p>
+            <a href="/">
+              <div class="button">Voltar para Página Inicial</div>
+            </a>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

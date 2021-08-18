@@ -1,0 +1,175 @@
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 11.4rem 1fr;
+
+  grid-template-areas:
+    'header header'
+    'left right';
+}
+
+header {
+  grid-area: header;
+}
+
+#bg {
+  grid-area: left;
+
+  background: url(/images/home-bg-img.svg) no-repeat top/contain;
+
+  background-position-x: -10rem;
+}
+
+.modal input,
+.modal button {
+  margin-bottom: 0;
+  padding: 1.3rem 3.2rem;
+  width: auto;
+}
+
+.none {
+  display: none;
+  opacity: 0;
+}
+
+main {
+  grid-area: right;
+
+  display: flex;
+  align-items: center;
+  margin-top: -12rem;
+}
+
+table {
+  border: 1px solid black;
+  width: 100%;
+  margin: 0;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+main .container {
+  width: min(36.3rem, 100%);
+}
+
+main h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-size: clamp(20px, 5vw, 2.8rem);
+  margin-bottom: 2.4rem;
+  margin-top: 7rem;
+}
+
+.width48 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.width48 button,
+.width48 .button {
+  width: 48%;
+  line-height: normal;
+}
+
+input {
+  border: 0.2rem solid var(--grey-blue);
+  padding: 0 1.6rem;
+  outline: none;
+}
+
+input,
+button {
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+#table button {
+  background: var(--blue);
+  color: var(--white);
+  text-align: center;
+}
+
+/* Separator line */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.separator div:nth-child(2) {
+  color: var(--grey-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding: 0 1.35rem;
+  line-height: 0;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+  background: var(--grey-blue);
+  width: 100%;
+  height: 1px;
+}
+
+/* Balls */
+.ball {
+  width: 21.2rem;
+  height: 21.2rem;
+  background: var(--blue);
+  clip-path: circle();
+
+  opacity: 0.1;
+  position: fixed;
+}
+
+.ball.top {
+  width: 63.3rem;
+  height: 63.3rem;
+  top: -46rem;
+  right: -35rem;
+}
+
+.ball.bottom {
+  bottom: -15rem;
+  right: 5.6rem;
+}
+
+#table h2 {
+  margin-top: 2rem;
+}
+
+#table header {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#table header .buttons {
+  display: flex;
+}
+
+#table header .buttons .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#table header .buttons .button:nth-child(1) {
+  margin-right: 0.8rem;
+}
+
+#table header .buttons .button:nth-child(2) {
+  margin-right: 0.8rem;
+}
+
+#table header .buttons .button {
+  padding: 1.3rem 1.6rem;
+}

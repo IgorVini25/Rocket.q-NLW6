@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Tabela - Rocket.Q</title>
+
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/admin.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="table" class="content">
+      <header>
+        <a href="/">
+          <img src="/images/logo.svg" alt="Rocket.Q Logo" />
+        </a>
+
+        <div class="buttons">
+          <a href="/admin" class="button">
+            Voltar para Página de Admin
+          </a>
+          <a href="/" class="button">
+            Voltar para Página Principal
+          </a>
+        </div>
+      </header>
+
+      <div id="bg">
+        <div class="ball top"></div>
+        <div class="ball bottom"></div>
+      </div>
+
+      <main>
+        <div class="container">
+          <% if (tableType == 'all') { %>
+            <h2>Tabela de Salas</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Senha</th>
+                </tr>
+              </thead>
+              <% roomsTable.forEach(room => {%>
+                <tr>
+                  <td><%= room.id %></td>
+                  <td><%= room.pass %></td>
+                </tr>
+                <% }) %>
+            </table>
+          <h2>Tabela de Questões</h2>
+          <table>
+          <thead>
+              <tr>
+                <th>Id da questão</th>
+                <th>Questão</th>
+                <th>Marcada como Lida</th>
+                <th>Sala</th>
+              </tr>
+          </thead>
+          <% questionsTable.forEach(question => {%>
+              <tr>
+                <td><%= question.id %></td>
+                <td>
+                  <% if (question.title.length > 25) { let bigQuestion =
+                  question.title.slice(0, 25) + '...'%> <%= bigQuestion %> <% }
+                  else { %> <%= question.title %> <% } %>
+                </td>
+                <td>
+                  <% if (question.read == 1) { %> Sim <% } else { %> Não <% } %>
+                </td>
+                <td><%= question.room %></td>
+              </tr>
+              <% }) %>
+          <% } %>
+          <% if (tableType == 'rooms') { %>
+          <h2>Tabela de Salas</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Senha</th>
+              </tr>
+            </thead>
+          <% } %> 
+          <% if (tableType == 'questions') { %>
+          <h2>Tabela de Questões</h2>
+          <table>
+          <thead>
+              <tr>
+                <th>Id da questão</th>
+                <th>Questão</th>
+                <th>Marcada como Lida</th>
+                <th>Sala</th>
+              </tr>
+          </thead>
+              <% } %>
+            </thead>
+            <tbody>
+              <% if (tableType == 'rooms') { %> <% dataTable.forEach(room => {%>
+              <tr>
+                <td><%= room.id %></td>
+                <td><%= room.pass %></td>
+              </tr>
+              <% }) %> <% } %> <% if (tableType == 'questions') { %> <%
+              dataTable.forEach(question => {%>
+              <tr>
+                <td><%= question.id %></td>
+                <td>
+                  <% if (question.title.length > 25) { let bigQuestion =
+                  question.title.slice(0, 25) + '...'%> <%= bigQuestion %> <% }
+                  else { %> <%= question.title %> <% } %>
+                </td>
+                <td>
+                  <% if (question.read == 1) { %> Sim <% } else { %> Não <% } %>
+                </td>
+                <td><%= question.room %></td>
+              </tr>
+              <% }) %> <% } %>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

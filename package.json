@@ -1,0 +1,22 @@
+{
+  "name": "Rocket.q-NLW6",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido na trilha Discorver da NLW-6",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon .",
+    "init-db": "node src/db/init.js"
+  },
+  "keywords": [],
+  "author": "IgorVini25",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
